@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 /**
 TODO: replace with stream reader
@@ -18,10 +17,7 @@ public class SaveLoadClass<T>
     }
     public void setItem(T obj)
     {
-        // if (!Directory.Exists(Application.persistentDataPath + "/mySaveData/"))
-        // {
-        //     Directory.CreateDirectory("/mySaveData/");
-        // }
+
         FileStream fcreate;
         if (!File.Exists(Path.Combine(Application.persistentDataPath, this.fileName)))
         {
@@ -45,10 +41,6 @@ public class SaveLoadClass<T>
     {
         try
         {
-            // if (!Directory.Exists(Application.persistentDataPath + "/mySaveData/"))
-            // {
-            //     Directory.CreateDirectory("/mySaveData/");
-            // }
             using (StreamReader stream = new StreamReader(Path.Combine(Application.persistentDataPath, this.fileName)))
             {
                 string json = stream.ReadToEnd();
