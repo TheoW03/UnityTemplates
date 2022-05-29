@@ -1,4 +1,4 @@
 # seralization In Unity
 
-basic reuseable code for JSON seralization in unity.
-just add a file path for use.
+saveload class: basic JSON save and load class In C# unity
+Player controller: Player this is a basic control functionality class
