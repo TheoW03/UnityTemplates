@@ -1,6 +1,6 @@
 # unity templates
 
-this is reuseable unity codes A person may need in there projects.  
+this is reuseable unity code A person may need in there projects.  
 
 feel free to copy paste some of these things into your projects
 
