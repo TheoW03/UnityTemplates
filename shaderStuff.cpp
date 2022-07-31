@@ -10,6 +10,7 @@
 using namespace std;
 #define print(C) cout<<C<<endl
 using std::filesystem::current_path;
+
 static int compileShader(unsigned int type, const string& source) {
     unsigned int id =  glCreateShader(type);
     const char* src = source.c_str();
@@ -63,4 +64,14 @@ string getShaderString(string path) {
    
 
 
+}
+
+int main(){
+     string fragSahderPath = getPathF().u8string() + "\\fragShader.txt"; 
+  
+    string vertexShaderPath = getPathF().u8string() + "\\vertexShader.txt";
+    string fragShader = getShaderString(fragSahderPath);
+    string vertexShader = getShaderString(vertexShaderPath);
+    unsigned int shader = CreateShader(vertexShader,fragShader);
+    return 1;
 }
